@@ -66,6 +66,8 @@ Camada responsável pela orquestração da aplicação.
 **Pipeline Behaviors (Cross-cutting concerns):**
 
 ```csharp id="m6m4r2"
+services.AddSingleton(typeof(IAppLogger<>), typeof(AppLogger<>));
+
 services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
 ```
@@ -83,7 +85,8 @@ Responsável pela comunicação com o mundo externo.
 * Serviços auxiliares
 
 ```csharp id="8dy5wq"
-services.AddSingleton(typeof(IAppLogger<>), typeof(AppLogger<>));
+services.AddScoped<IApplicationDbContext, AppDbContext>();
+services.AddScoped<IUnitOfWork, UnitOfWork>();
 ```
 
 ---
