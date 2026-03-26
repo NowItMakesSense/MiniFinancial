@@ -1,0 +1,496 @@
+2026-03-12 18:22:05.372 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 18:22:05.882 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 18:22:05.935 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 18:22:06.311 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 18:22:06.312 -03:00 [INF] Hosting environment: Development
+2026-03-12 18:22:06.313 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 18:22:46.673 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5172/scalar - null null
+2026-03-12 18:22:46.847 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5172/scalar - 307 null null 186.7273ms
+2026-03-12 18:22:46.942 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar - null null
+2026-03-12 18:22:48.745 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:22:48.858 -03:00 [INF] Executing RedirectResult, redirecting to scalar/.
+2026-03-12 18:22:48.861 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:22:48.864 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar - 302 null null 1921.6799ms
+2026-03-12 18:22:48.872 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-12 18:22:48.879 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:22:49.115 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-12 18:22:49.146 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:22:49.162 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 289.8002ms
+2026-03-12 18:22:49.329 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-12 18:22:49.329 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-12 18:22:49.329 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-12 18:22:49.329 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-12 18:22:49.337 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 18:22:49.337 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 18:22:49.355 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 26.2065ms
+2026-03-12 18:22:49.359 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:22:49.359 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:22:49.370 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 18:22:49.371 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 42.3249ms
+2026-03-12 18:22:49.437 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 18:22:49.441 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 112.2667ms
+2026-03-12 18:22:49.459 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 129.7631ms
+2026-03-12 18:22:49.926 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-12 18:22:49.933 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 18:22:49.992 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 18:22:49.995 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 69.3786ms
+2026-03-12 18:22:50.812 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-12 18:22:50.814 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 18:22:50.817 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:22:50.819 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 18:22:50.822 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 10.0764ms
+2026-03-12 18:25:29.146 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-12 18:25:29.150 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-12 18:25:29.256 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-12 18:25:29.269 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 18:25:29.415 -03:00 [INF] Handling request LoginUserCommand {"Email":"arnaldo@gmail.com","Password":"arnaldo","$type":"LoginUserCommand"}
+2026-03-12 18:25:32.091 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 18:25:40.142 -03:00 [INF] Executed DbCommand (300ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-12 18:25:41.745 -03:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-12 18:25:41.770 -03:00 [INF] Handled request LoginUserCommand
+2026-03-12 18:25:41.791 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-12 18:25:41.850 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 12555.7684ms
+2026-03-12 18:25:42.047 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-12 18:25:42.248 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 13102.4806ms
+2026-03-12 18:28:01.385 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:28:01.697 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:28:01.710 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:28:01.764 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:28:01.858 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:28:01.917 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 18:28:01.990 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 18:28:01.991 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 18:28:01.998 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 286.4286ms
+2026-03-12 18:28:02.000 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:28:02.001 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 615.7304ms
+2026-03-12 18:29:02.951 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:29:02.958 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:29:02.960 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:29:02.971 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:29:17.772 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:29:27.606 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 18:33:43.696 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 18:33:43.699 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 18:33:43.700 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 280737.6517ms
+2026-03-12 18:33:43.702 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:33:43.704 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 280752.2739ms
+2026-03-12 18:41:29.827 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 18:41:30.166 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 18:41:30.168 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 18:41:30.493 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 18:41:30.494 -03:00 [INF] Hosting environment: Development
+2026-03-12 18:41:30.495 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 18:42:17.331 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:42:17.567 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:42:17.618 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:42:17.628 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 18:42:17.710 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:43:32.302 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 18:43:35.391 -03:00 [INF] Executed DbCommand (181ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:43:35.620 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 18:43:35.690 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 18:43:35.700 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 18:43:35.730 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 78101.4638ms
+2026-03-12 18:43:35.734 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:43:35.753 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 78429.1326ms
+2026-03-12 18:44:17.791 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-12 18:44:17.975 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:44:18.288 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-12 18:44:18.331 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 18:44:18.351 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-12 18:44:18.355 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-12 18:44:18.356 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-12 18:44:18.370 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 579.1718ms
+2026-03-12 18:44:18.383 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 18:44:18.383 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 18:44:18.400 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-12 18:44:18.402 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 51.2021ms
+2026-03-12 18:44:18.405 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:44:18.405 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:44:18.421 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 18:44:18.424 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 68.0663ms
+2026-03-12 18:44:18.454 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 18:44:18.456 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 100.5866ms
+2026-03-12 18:44:18.463 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.0786ms
+2026-03-12 18:44:19.049 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-12 18:44:19.057 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 18:44:19.125 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 18:44:19.127 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 78.3373ms
+2026-03-12 18:44:19.751 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-12 18:44:19.811 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 18:44:19.813 -03:00 [INF] Sending file with download name ''.
+2026-03-12 18:44:19.814 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 18:44:19.815 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 64.6336ms
+2026-03-12 18:44:53.591 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:44:53.600 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:44:53.615 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:44:53.621 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:44:53.740 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:44:53.747 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 18:44:53.751 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 18:44:53.753 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 18:44:53.759 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 139.7485ms
+2026-03-12 18:44:53.760 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:44:53.763 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 172.2853ms
+2026-03-12 18:45:01.227 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:45:01.236 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:45:01.238 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:45:01.251 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:45:01.276 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:45:01.280 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 18:46:03.459 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 18:46:03.462 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 18:46:03.463 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 62222.5242ms
+2026-03-12 18:46:03.465 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:46:03.466 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 62239.3788ms
+2026-03-12 18:46:32.477 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 18:46:32.481 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 18:46:32.490 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 18:46:32.495 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 18:46:32.501 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 18:46:32.507 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:08:06.079 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 19:08:06.567 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 19:08:06.569 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 19:08:06.934 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 19:08:06.935 -03:00 [INF] Hosting environment: Development
+2026-03-12 19:08:06.936 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 19:08:07.403 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:08:07.719 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:08:07.764 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:08:07.771 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 19:08:07.830 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:08:09.249 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 19:08:11.472 -03:00 [INF] Executed DbCommand (70ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:08:11.626 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:12:53.065 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:12:53.105 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:12:53.122 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 285351.6448ms
+2026-03-12 19:12:53.125 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:12:53.139 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 285742.4139ms
+2026-03-12 19:12:53.993 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-12 19:12:54.087 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:12:54.301 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-12 19:12:54.326 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:12:54.331 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 337.6682ms
+2026-03-12 19:12:54.346 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-12 19:12:54.346 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-12 19:12:54.348 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-12 19:12:54.367 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:12:54.367 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:12:54.384 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:12:54.384 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:12:54.388 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 42.0158ms
+2026-03-12 19:12:54.392 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:12:54.394 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 46.4872ms
+2026-03-12 19:12:54.396 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-12 19:12:54.420 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:12:54.421 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 75.4887ms
+2026-03-12 19:12:54.444 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.3145ms
+2026-03-12 19:15:05.061 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 19:15:05.350 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 19:15:05.352 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 19:15:05.621 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 19:15:05.623 -03:00 [INF] Hosting environment: Development
+2026-03-12 19:15:05.624 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 19:15:15.611 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-12 19:15:15.849 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:15:16.110 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-12 19:15:16.155 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:15:16.164 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 561.468ms
+2026-03-12 19:15:16.192 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-12 19:15:16.201 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-12 19:15:16.206 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-12 19:15:16.227 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-12 19:15:16.233 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:15:16.233 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 40.6221ms
+2026-03-12 19:15:16.235 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:15:16.250 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:15:16.251 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:15:16.275 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:15:16.276 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 48.8098ms
+2026-03-12 19:15:16.305 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:15:16.341 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 134.4374ms
+2026-03-12 19:15:16.344 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 143.6042ms
+2026-03-12 19:15:16.641 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-12 19:15:16.654 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 19:15:16.721 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 19:15:16.733 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 91.2098ms
+2026-03-12 19:15:16.733 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-12 19:15:16.747 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 19:15:16.748 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:15:16.749 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 19:15:16.750 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 17.3315ms
+2026-03-12 19:15:56.067 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution - null null
+2026-03-12 19:15:56.160 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:15:56.207 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:15:56.215 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 19:16:00.723 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 4508.8922ms
+2026-03-12 19:16:00.728 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:16:00.755 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution - 400 null application/json; charset=utf-8 4688.5545ms
+2026-03-12 19:16:24.087 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:16:24.094 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:16:24.095 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:16:24.108 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:16:25.318 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 19:16:26.701 -03:00 [INF] Executed DbCommand (161ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:16:26.955 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:16:27.051 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:16:27.063 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:16:27.080 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 2982.3752ms
+2026-03-12 19:16:27.083 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:16:27.103 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 3015.6705ms
+2026-03-12 19:17:31.565 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-12 19:17:31.578 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:17:31.581 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-12 19:17:31.582 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-12 19:17:31.583 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 18.785ms
+2026-03-12 19:17:31.616 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-12 19:17:31.616 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-12 19:17:31.617 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-12 19:17:31.636 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-12 19:17:31.623 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 7.7308ms
+2026-03-12 19:17:31.628 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:17:31.637 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:17:31.641 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:17:31.642 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:17:31.649 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-12 19:17:31.649 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-12 19:17:31.652 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 304 null null 34.7445ms
+2026-03-12 19:17:31.650 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 304 null null 34.0229ms
+2026-03-12 19:17:31.654 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.4689ms
+2026-03-12 19:17:32.278 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-12 19:17:32.291 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 19:17:32.336 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-12 19:17:32.344 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 66.0863ms
+2026-03-12 19:17:32.837 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-12 19:17:32.848 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 19:17:32.849 -03:00 [INF] Sending file with download name ''.
+2026-03-12 19:17:32.851 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-12 19:17:32.853 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 304 null null 15.7462ms
+2026-03-12 19:18:09.623 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:18:09.629 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:18:09.638 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:18:09.651 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"29fc3faa-4ad9-4b18-b446-61a3a6c4424a","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:18:09.736 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:18:09.742 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:18:09.747 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:18:09.748 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:18:09.753 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 111.6917ms
+2026-03-12 19:18:09.755 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:18:09.757 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 134.2639ms
+2026-03-12 19:21:12.771 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 19:21:13.043 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 19:21:13.044 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 19:21:13.358 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 19:21:13.359 -03:00 [INF] Hosting environment: Development
+2026-03-12 19:21:13.360 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 19:21:18.589 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-12 19:21:18.711 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-12 19:21:18.761 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-12 19:21:18.768 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 19:21:18.875 -03:00 [INF] Handling request LoginUserCommand {"Email":"ronaldo@gmail.com","Password":"ronaldo","$type":"LoginUserCommand"}
+2026-03-12 19:21:20.130 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 19:21:21.809 -03:00 [INF] Executed DbCommand (90ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-12 19:21:22.464 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-12 19:21:22.484 -03:00 [INF] Handled request LoginUserCommand
+2026-03-12 19:21:22.493 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-12 19:21:22.534 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 3766.3181ms
+2026-03-12 19:21:22.537 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-12 19:21:22.557 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 3973.7508ms
+2026-03-12 19:21:54.555 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:21:54.626 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:21:54.637 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:21:54.686 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"39a2053e-3312-4a0c-86f6-9fe77202cd90","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:21:54.814 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:21:54.866 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:21:54.880 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:21:54.882 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:21:54.891 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 250.0302ms
+2026-03-12 19:21:54.893 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:21:54.895 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 339.6965ms
+2026-03-12 19:22:10.682 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:22:10.691 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:22:10.693 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:22:10.709 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"39a2053e-3312-4a0c-86f6-9fe77202cd90","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:22:10.736 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:22:10.741 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p2
+2026-03-12 19:23:10.347 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @getUserAccount_Id1='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[DestinyAccountId] = @getUserAccount_Id1 AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p3
+2026-03-12 19:24:20.330 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:24:20.342 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:24:20.345 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 129649.002ms
+2026-03-12 19:24:20.346 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:24:20.348 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 129666.1247ms
+2026-03-12 19:24:51.050 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 19:24:51.347 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 19:24:51.349 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 19:24:51.796 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 19:24:51.799 -03:00 [INF] Hosting environment: Development
+2026-03-12 19:24:51.802 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 19:24:55.088 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:24:55.302 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:24:55.365 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:24:55.390 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 19:24:55.503 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"39a2053e-3312-4a0c-86f6-9fe77202cd90","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:24:56.713 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 19:24:58.725 -03:00 [INF] Executed DbCommand (128ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:24:59.075 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @getUserAccount_Id1='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND [t].[OriginAccountId] = @getUserAccount_Id AND [t].[DestinyAccountId] = @getUserAccount_Id1 AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p3
+2026-03-12 19:25:08.395 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:25:48.362 -03:00 [ERR] Failed executing DbCommand (89ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @getUserAccount_Id1='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND ([t].[OriginAccountId] = @getUserAccount_Id OR [t].[DestinyAccountId] = @getUserAccount_Id1) AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p3
+2026-03-12 19:25:48.392 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MiniFinancial.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: Já existe um DataReader aberto associado a este Connection, que precisa ser fechado primeiro.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: Já existe um DataReader aberto associado a este Connection, que precisa ser fechado primeiro.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-03-12 19:26:17.383 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-12 19:26:17.665 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-12 19:26:17.666 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-12 19:26:17.954 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-12 19:26:17.957 -03:00 [INF] Hosting environment: Development
+2026-03-12 19:26:17.958 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-12 19:26:36.566 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - null null
+2026-03-12 19:26:36.854 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:26:36.900 -03:00 [INF] Route matched with {action = "GetBalanceEvolution", controller = "Reports"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBalanceEvolution(Int32) on controller MiniFinancial.Presentation.Controllers.ReportsController (MiniFinancial.Presentation).
+2026-03-12 19:26:36.907 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-12 19:26:36.970 -03:00 [INF] Handling request GetBalanceReportCommand {"UserId":"39a2053e-3312-4a0c-86f6-9fe77202cd90","Year":2026,"$type":"GetBalanceReportCommand"}
+2026-03-12 19:26:38.217 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-12 19:26:39.327 -03:00 [INF] Executed DbCommand (123ms) [Parameters=[@request_UserId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+FROM [Accounts] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @request_UserId AND [a].[IsDeleted] = CAST(0 AS bit)
+2026-03-12 19:26:39.785 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@getUserAccount_Id='?' (DbType = Guid), @getUserAccount_Id1='?' (DbType = Guid), @p='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+FROM [Transactions] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit) AND ([t].[OriginAccountId] = @getUserAccount_Id OR [t].[DestinyAccountId] = @getUserAccount_Id1) AND [t].[OccurredAt] >= @p AND [t].[OccurredAt] < @p3
+2026-03-12 19:26:39.862 -03:00 [INF] Handled request GetBalanceReportCommand
+2026-03-12 19:26:39.872 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Common.Result`1[[MiniFinancial.Application.DTOs.GetBalanceReportDTO, MiniFinancial.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-12 19:26:39.893 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation) in 2985.7954ms
+2026-03-12 19:26:39.896 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.ReportsController.GetBalanceEvolution (MiniFinancial.Presentation)'
+2026-03-12 19:26:39.914 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Reports/balance-evolution?year=2026 - 200 null application/json; charset=utf-8 3355.2534ms

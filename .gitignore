@@ -1,0 +1,6 @@
+.vs/
+MiniFinancial.Presentation/appsettings.json
+MiniFinancial.Presentation/appsettings.Production.json
+MiniFinancial.Presentation/appsettings.Development.json
+MiniFinancial.Presentation/bin/Debug/net10.0/appsettings.Production.json
+MiniFinancial.Presentation/bin/Debug/net10.0/appsettings.Development.json

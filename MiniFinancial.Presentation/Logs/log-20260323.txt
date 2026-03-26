@@ -1,0 +1,6 @@
+2026-03-23 13:23:41.661 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 13:23:42.060 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-23 13:23:42.061 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-23 13:23:42.144 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-23 13:23:42.146 -03:00 [INF] Hosting environment: Development
+2026-03-23 13:23:42.148 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation

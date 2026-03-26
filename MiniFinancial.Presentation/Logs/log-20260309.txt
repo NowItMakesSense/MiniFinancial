@@ -1,0 +1,708 @@
+2026-03-09 18:26:06.676 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:26:55.363 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:26:57.313 -03:00 [INF] Executed DbCommand (186ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [MiniFinancial];
+2026-03-09 18:26:57.365 -03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MiniFinancial] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-03-09 18:26:57.384 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-09 18:26:57.388 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-09 18:26:57.411 -03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-09 18:26:57.522 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-09 18:26:57.531 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-09 18:26:57.532 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-09 18:26:57.542 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-09 18:26:57.552 -03:00 [INF] Applying migration '20260309212614_InitialCreate'.
+2026-03-09 18:26:57.617 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [MonthlyLimit] decimal(18,2) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2026-03-09 18:26:57.620 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [IdempotencyRequests] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Key] nvarchar(100) NOT NULL,
+    [RequestHash] nvarchar(200) NOT NULL,
+    [ResponseJson] nvarchar(max) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_IdempotencyRequests] PRIMARY KEY ([Id])
+);
+2026-03-09 18:26:57.621 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [Email] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Role] int NOT NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2026-03-09 18:26:57.623 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Accounts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [AllowNegativeBalance] bit NOT NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Accounts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Accounts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2026-03-09 18:26:57.625 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRefreshToken] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Token] nvarchar(500) NOT NULL,
+    [ExpiresAt] datetimeoffset NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [RevokedAt] datetimeoffset NULL,
+    [ReplacedByToken] nvarchar(max) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_UserRefreshToken] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserRefreshToken_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2026-03-09 18:26:57.628 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [Id] uniqueidentifier NOT NULL,
+    [OriginAccountId] uniqueidentifier NOT NULL,
+    [DestinyAccountId] uniqueidentifier NULL,
+    [CategoryUserId] uniqueidentifier NULL,
+    [CategoryUserName] nvarchar(150) NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Type] int NOT NULL,
+    [Category] int NOT NULL,
+    [Description] nvarchar(300) NOT NULL,
+    [OccurredAt] datetimeoffset NOT NULL,
+    [IsRecurring] bit NOT NULL,
+    [IsReversal] bit NULL,
+    [ReversedTransactionId] uniqueidentifier NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Transactions_Accounts_OriginAccountId] FOREIGN KEY ([OriginAccountId]) REFERENCES [Accounts] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Transactions_Categories_CategoryUserId] FOREIGN KEY ([CategoryUserId]) REFERENCES [Categories] ([Id]) ON DELETE NO ACTION
+);
+2026-03-09 18:26:58.136 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Accounts_UserId] ON [Accounts] ([UserId]);
+2026-03-09 18:26:58.137 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Accounts_UserId_Name] ON [Accounts] ([UserId], [Name]);
+2026-03-09 18:26:58.138 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Categories_UserId_Name] ON [Categories] ([UserId], [Name]);
+2026-03-09 18:26:58.139 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_IdempotencyRequests_UserId_Key] ON [IdempotencyRequests] ([UserId], [Key]);
+2026-03-09 18:26:58.140 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_CategoryUserId] ON [Transactions] ([CategoryUserId]);
+2026-03-09 18:26:58.141 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_DestinyAccountId] ON [Transactions] ([DestinyAccountId]);
+2026-03-09 18:26:58.142 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_OccurredAt] ON [Transactions] ([OccurredAt]);
+2026-03-09 18:26:58.143 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_OriginAccountId] ON [Transactions] ([OriginAccountId]);
+2026-03-09 18:26:58.144 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_UserRefreshToken_Token] ON [UserRefreshToken] ([Token]);
+2026-03-09 18:26:58.145 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserRefreshToken_UserId] ON [UserRefreshToken] ([UserId]);
+2026-03-09 18:26:58.146 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]);
+2026-03-09 18:26:58.151 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260309212614_InitialCreate', N'10.0.3');
+2026-03-09 18:26:58.155 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-09 18:27:43.605 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-09 18:27:45.274 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-09 18:27:45.275 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-09 18:27:45.348 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-09 18:27:45.356 -03:00 [INF] Hosting environment: Development
+2026-03-09 18:27:45.361 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-09 18:28:06.948 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-09 18:28:08.818 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:28:08.991 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-09 18:28:09.016 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:28:09.025 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 2094.0889ms
+2026-03-09 18:28:09.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-09 18:28:09.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-09 18:28:09.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-09 18:28:09.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-09 18:28:09.219 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:28:09.223 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:28:09.240 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:28:09.240 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:28:09.245 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:28:09.247 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 30.9495ms
+2026-03-09 18:28:09.249 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 32.3447ms
+2026-03-09 18:28:09.312 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:28:09.316 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.5627ms
+2026-03-09 18:28:09.319 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 103.015ms
+2026-03-09 18:28:09.739 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-09 18:28:09.764 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:28:09.819 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:28:09.821 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 82.1564ms
+2026-03-09 18:28:10.594 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-09 18:28:10.598 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:28:10.599 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:28:10.601 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:28:10.604 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 10.6841ms
+2026-03-09 18:29:05.609 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/User - application/json 93
+2026-03-09 18:29:05.616 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:29:05.682 -03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UserController (MiniFinancial.Presentation).
+2026-03-09 18:29:05.694 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-09 18:29:12.710 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation) in 7017.5156ms
+2026-03-09 18:29:12.716 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:29:12.745 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/User - 400 null application/json; charset=utf-8 7135.6467ms
+2026-03-09 18:29:23.816 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/User - application/json 93
+2026-03-09 18:29:23.821 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:29:23.824 -03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UserController (MiniFinancial.Presentation).
+2026-03-09 18:29:26.499 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:29:29.483 -03:00 [INF] Executed DbCommand (297ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:29:30.094 -03:00 [INF] Executed DbCommand (56ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 200), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [DeletedAt], [Email], [IsDeleted], [Name], [PasswordHash], [Role], [UpdatedAt], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:29:30.130 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.UserDTO'.
+2026-03-09 18:29:30.175 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation) in 6345.1709ms
+2026-03-09 18:29:30.187 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:29:30.198 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/User - 201 null application/json; charset=utf-8 6381.0994ms
+2026-03-09 18:30:16.464 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/User - application/json 93
+2026-03-09 18:30:16.470 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:30:16.472 -03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UserController (MiniFinancial.Presentation).
+2026-03-09 18:30:16.602 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:30:16.693 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 200), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [DeletedAt], [Email], [IsDeleted], [Name], [PasswordHash], [Role], [UpdatedAt], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:30:16.697 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.UserDTO'.
+2026-03-09 18:30:16.699 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation) in 224.62ms
+2026-03-09 18:30:16.700 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:30:16.701 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/User - 201 null application/json; charset=utf-8 237.4699ms
+2026-03-09 18:31:50.203 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-09 18:31:50.460 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-09 18:31:50.462 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-09 18:31:50.515 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-09 18:31:50.515 -03:00 [INF] Hosting environment: Development
+2026-03-09 18:31:50.516 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-09 18:32:04.255 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 76
+2026-03-09 18:32:04.367 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-09 18:32:04.374 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-09 18:32:04.380 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 401 0 null 130.5538ms
+2026-03-09 18:32:18.297 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 76
+2026-03-09 18:32:18.306 -03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-09 18:32:18.308 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-09 18:32:18.309 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 401 0 null 12.0139ms
+2026-03-09 18:33:50.591 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-09 18:33:50.673 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:33:50.824 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-09 18:33:50.857 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:33:50.868 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-09 18:33:50.868 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-09 18:33:50.874 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:33:50.874 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 283.7176ms
+2026-03-09 18:33:50.868 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-09 18:33:50.911 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-09 18:33:50.922 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 54.5303ms
+2026-03-09 18:33:50.921 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:33:50.919 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:33:50.927 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:33:50.934 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:33:50.991 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 122.3348ms
+2026-03-09 18:33:51.009 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:33:51.010 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.3305ms
+2026-03-09 18:33:51.017 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 148.4684ms
+2026-03-09 18:33:51.351 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-09 18:33:51.367 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:33:51.446 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-09 18:33:51.447 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:33:51.452 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:33:51.453 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 101.2769ms
+2026-03-09 18:33:51.455 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:33:51.460 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:33:51.462 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 16.3145ms
+2026-03-09 18:33:59.490 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 76
+2026-03-09 18:33:59.494 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:33:59.538 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-09 18:33:59.544 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-09 18:34:00.424 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:34:01.355 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:34:01.540 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:34:01.743 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Boolean), @p6='?' (Size = 150), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([Id], [AllowNegativeBalance], [Balance], [CreatedAt], [DeletedAt], [IsDeleted], [Name], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:34:01.767 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.AccountDTO'.
+2026-03-09 18:34:01.809 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation) in 2264.1335ms
+2026-03-09 18:34:01.812 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:34:01.823 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 201 null application/json; charset=utf-8 2332.9817ms
+2026-03-09 18:34:42.451 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/User - application/json 100
+2026-03-09 18:34:42.455 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:34:42.463 -03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UserController (MiniFinancial.Presentation).
+2026-03-09 18:34:42.587 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:34:42.696 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 200), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [DeletedAt], [Email], [IsDeleted], [Name], [PasswordHash], [Role], [UpdatedAt], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:34:42.702 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.UserDTO'.
+2026-03-09 18:34:42.707 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation) in 239.2174ms
+2026-03-09 18:34:42.709 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:34:42.711 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/User - 201 null application/json; charset=utf-8 260.5115ms
+2026-03-09 18:35:23.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-09 18:35:23.630 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:35:23.634 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-09 18:35:23.636 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:35:23.638 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 19.9614ms
+2026-03-09 18:35:23.674 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-09 18:35:23.674 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-09 18:35:23.675 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-09 18:35:23.684 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:35:23.686 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:35:23.690 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 15.7189ms
+2026-03-09 18:35:23.694 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:35:23.694 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-09 18:35:23.695 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:35:23.699 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:35:23.701 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:35:23.704 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 304 null null 30.1144ms
+2026-03-09 18:35:23.706 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 304 null null 31.9791ms
+2026-03-09 18:35:23.718 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.6572ms
+2026-03-09 18:35:24.209 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-09 18:35:24.226 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:35:24.277 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:35:24.278 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 69.0763ms
+2026-03-09 18:35:24.841 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-09 18:35:24.843 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:35:24.844 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:35:24.845 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:35:24.846 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 304 null null 5.3328ms
+2026-03-09 18:35:52.819 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-09 18:35:53.139 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-09 18:35:53.141 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-09 18:35:53.189 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-09 18:35:53.190 -03:00 [INF] Hosting environment: Development
+2026-03-09 18:35:53.190 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-09 18:36:14.523 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-09 18:36:14.629 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-09 18:36:14.690 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-09 18:36:14.697 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-09 18:36:15.672 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:36:16.691 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:36:17.319 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-09 18:36:17.342 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-09 18:36:17.364 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 2668.3244ms
+2026-03-09 18:36:17.368 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-09 18:36:17.382 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 2864.0767ms
+2026-03-09 18:36:40.266 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-09 18:36:40.296 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-09 18:36:40.298 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-09 18:36:40.387 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:36:40.481 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-09 18:36:40.486 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-09 18:36:40.488 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 187.263ms
+2026-03-09 18:36:40.490 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-09 18:36:40.492 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 226.4984ms
+2026-03-09 18:39:05.660 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-09 18:39:06.117 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-09 18:39:06.119 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-09 18:39:06.478 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-09 18:39:06.479 -03:00 [INF] Hosting environment: Development
+2026-03-09 18:39:06.480 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-09 18:39:07.116 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 76
+2026-03-09 18:39:07.370 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:39:07.421 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-09 18:39:07.430 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-09 18:39:08.407 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:39:09.463 -03:00 [INF] Executed DbCommand (72ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:39:09.667 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:39:09.896 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Boolean), @p6='?' (Size = 150), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([Id], [AllowNegativeBalance], [Balance], [CreatedAt], [DeletedAt], [IsDeleted], [Name], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:39:09.918 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.AccountDTO'.
+2026-03-09 18:39:09.955 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation) in 2527.0542ms
+2026-03-09 18:39:09.957 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:39:09.975 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 201 null application/json; charset=utf-8 2866.608ms
+2026-03-09 18:40:28.142 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 73
+2026-03-09 18:40:28.149 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:40:28.151 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-09 18:40:28.227 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:40:28.234 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:40:28.246 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Boolean), @p6='?' (Size = 150), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([Id], [AllowNegativeBalance], [Balance], [CreatedAt], [DeletedAt], [IsDeleted], [Name], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-09 18:40:28.250 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.AccountDTO'.
+2026-03-09 18:40:28.252 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation) in 98.5147ms
+2026-03-09 18:40:28.255 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:40:28.256 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 201 null application/json; charset=utf-8 113.9844ms
+2026-03-09 18:41:23.461 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Category - application/json 101
+2026-03-09 18:41:23.470 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:41:23.481 -03:00 [INF] Route matched with {action = "Register", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Categories.Commands.RegisterCategoryCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.CategoryController (MiniFinancial.Presentation).
+2026-03-09 18:41:23.533 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:41:38.035 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation) in 14549.359ms
+2026-03-09 18:41:38.045 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:41:38.139 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Category - 400 null application/json; charset=utf-8 14677.5197ms
+2026-03-09 18:41:41.344 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Category - application/json 101
+2026-03-09 18:41:41.348 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:41:41.349 -03:00 [INF] Route matched with {action = "Register", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Categories.Commands.RegisterCategoryCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.CategoryController (MiniFinancial.Presentation).
+2026-03-09 18:41:41.353 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:42:10.591 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation) in 29240.1891ms
+2026-03-09 18:42:10.595 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:42:10.658 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Category - 400 null application/json; charset=utf-8 29314.3832ms
+2026-03-09 18:42:17.102 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Category - application/json 101
+2026-03-09 18:42:17.107 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:42:17.108 -03:00 [INF] Route matched with {action = "Register", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Categories.Commands.RegisterCategoryCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.CategoryController (MiniFinancial.Presentation).
+2026-03-09 18:42:17.118 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-09 18:42:17.142 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[DeletedAt], [c].[IsDeleted], [c].[MonthlyLimit], [c].[Name], [c].[UpdatedAt], [c].[UserId], [c].[Version]
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[UserId] = @userId AND [c].[IsDeleted] = CAST(0 AS bit)
+2026-03-09 18:42:17.194 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = Boolean), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 150), @p6='?' (DbType = DateTimeOffset), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [CreatedAt], [DeletedAt], [IsDeleted], [MonthlyLimit], [Name], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-03-09 18:42:17.199 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.CategoryDTO'.
+2026-03-09 18:42:17.203 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation) in 92.214ms
+2026-03-09 18:42:17.206 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:42:17.208 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Category - 201 null application/json; charset=utf-8 106.0738ms
+2026-03-09 18:44:32.765 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-09 18:44:33.173 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-09 18:44:33.175 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-09 18:44:33.447 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-09 18:44:33.449 -03:00 [INF] Hosting environment: Development
+2026-03-09 18:44:33.450 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-09 18:45:18.369 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Transaction - application/json 224
+2026-03-09 18:45:18.587 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:45:18.663 -03:00 [INF] Route matched with {action = "Register", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Transactions.Commands.RegisterTransactionCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.TransactionController (MiniFinancial.Presentation).
+2026-03-09 18:45:18.690 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-09 18:45:23.505 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation) in 4833.7566ms
+2026-03-09 18:45:23.508 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:45:23.532 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Transaction - 400 null application/json; charset=utf-8 5170.1682ms
+2026-03-09 18:46:31.116 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Transaction - application/json 224
+2026-03-09 18:46:31.127 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:46:31.129 -03:00 [INF] Route matched with {action = "Register", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Transactions.Commands.RegisterTransactionCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.TransactionController (MiniFinancial.Presentation).
+2026-03-09 18:46:38.345 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-09 18:46:39.441 -03:00 [INF] Executed DbCommand (74ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:46:44.539 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:47:22.647 -03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p9='?' (DbType = Guid), @p0='?' (DbType = Boolean), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (DbType = DateTimeOffset), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?' (DbType = Guid), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p13='?' (DbType = Int32), @p14='?' (DbType = Guid), @p15='?' (Size = 150), @p16='?' (DbType = DateTimeOffset), @p17='?' (DbType = DateTimeOffset), @p18='?' (Size = 300), @p19='?' (DbType = Guid), @p20='?' (DbType = Boolean), @p21='?' (DbType = Boolean), @p22='?' (DbType = Boolean), @p23='?' (DbType = DateTimeOffset), @p24='?' (DbType = Guid), @p25='?' (DbType = Guid), @p26='?' (DbType = Int32), @p27='?' (DbType = DateTimeOffset), @p28='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Accounts] SET [AllowNegativeBalance] = @p0, [Balance] = @p1, [CreatedAt] = @p2, [DeletedAt] = @p3, [IsDeleted] = @p4, [Name] = @p5, [UpdatedAt] = @p6, [UserId] = @p7, [Version] = @p8
+OUTPUT 1
+WHERE [Id] = @p9 AND [Version] = @p10;
+INSERT INTO [Transactions] ([Id], [Amount], [Category], [CategoryUserId], [CategoryUserName], [CreatedAt], [DeletedAt], [Description], [DestinyAccountId], [IsDeleted], [IsRecurring], [IsReversal], [OccurredAt], [OriginAccountId], [ReversedTransactionId], [Type], [UpdatedAt], [Version])
+VALUES (@p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28);
+2026-03-09 18:47:25.091 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.TransactionDTO'.
+2026-03-09 18:47:25.134 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation) in 54002.7996ms
+2026-03-09 18:47:25.137 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:47:25.148 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Transaction - 201 null application/json; charset=utf-8 54034.7664ms
+2026-03-09 18:48:17.224 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-09 18:48:17.312 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:48:17.473 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-09 18:48:17.498 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-09 18:48:17.520 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-09 18:48:17.520 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-09 18:48:17.503 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 278.9649ms
+2026-03-09 18:48:17.520 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-09 18:48:17.540 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:48:17.536 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:48:17.553 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 33.1578ms
+2026-03-09 18:48:17.555 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:48:17.555 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:48:17.557 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-09 18:48:17.563 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-09 18:48:17.565 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 44.9409ms
+2026-03-09 18:48:17.603 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-09 18:48:17.615 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 95.1664ms
+2026-03-09 18:48:17.623 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.113ms
+2026-03-09 18:48:17.974 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-09 18:48:17.982 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:48:18.060 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-09 18:48:18.061 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 87.7928ms
+2026-03-09 18:48:18.861 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-09 18:48:18.867 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:48:18.871 -03:00 [INF] Sending file with download name ''.
+2026-03-09 18:48:18.875 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-09 18:48:18.877 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 15.5244ms
+2026-03-09 18:49:05.479 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Transaction - application/json 227
+2026-03-09 18:49:05.485 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:49:05.496 -03:00 [INF] Route matched with {action = "Register", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Transactions.Commands.RegisterTransactionCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.TransactionController (MiniFinancial.Presentation).
+2026-03-09 18:49:10.222 -03:00 [INF] Executed DbCommand (42ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:49:12.718 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:49:32.200 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p9='?' (DbType = Guid), @p0='?' (DbType = Boolean), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (DbType = DateTimeOffset), @p7='?' (DbType = Guid), @p8='?' (DbType = Int32), @p10='?' (DbType = Int32), @p20='?' (DbType = Guid), @p11='?' (DbType = Boolean), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p13='?' (DbType = DateTimeOffset), @p14='?' (DbType = DateTimeOffset), @p15='?' (DbType = Boolean), @p16='?' (Size = 150), @p17='?' (DbType = DateTimeOffset), @p18='?' (DbType = Guid), @p19='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = Guid), @p23='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p24='?' (DbType = Int32), @p25='?' (DbType = Guid), @p26='?' (Size = 150), @p27='?' (DbType = DateTimeOffset), @p28='?' (DbType = DateTimeOffset), @p29='?' (Size = 300), @p30='?' (DbType = Guid), @p31='?' (DbType = Boolean), @p32='?' (DbType = Boolean), @p33='?' (DbType = Boolean), @p34='?' (DbType = DateTimeOffset), @p35='?' (DbType = Guid), @p36='?' (DbType = Guid), @p37='?' (DbType = Int32), @p38='?' (DbType = DateTimeOffset), @p39='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Accounts] SET [AllowNegativeBalance] = @p0, [Balance] = @p1, [CreatedAt] = @p2, [DeletedAt] = @p3, [IsDeleted] = @p4, [Name] = @p5, [UpdatedAt] = @p6, [UserId] = @p7, [Version] = @p8
+OUTPUT 1
+WHERE [Id] = @p9 AND [Version] = @p10;
+UPDATE [Accounts] SET [AllowNegativeBalance] = @p11, [Balance] = @p12, [CreatedAt] = @p13, [DeletedAt] = @p14, [IsDeleted] = @p15, [Name] = @p16, [UpdatedAt] = @p17, [UserId] = @p18, [Version] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [Version] = @p21;
+INSERT INTO [Transactions] ([Id], [Amount], [Category], [CategoryUserId], [CategoryUserName], [CreatedAt], [DeletedAt], [Description], [DestinyAccountId], [IsDeleted], [IsRecurring], [IsReversal], [OccurredAt], [OriginAccountId], [ReversedTransactionId], [Type], [UpdatedAt], [Version])
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39);
+2026-03-09 18:49:32.208 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.TransactionDTO'.
+2026-03-09 18:49:32.213 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation) in 26708.9758ms
+2026-03-09 18:49:32.214 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:49:32.216 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Transaction - 201 null application/json; charset=utf-8 26736.6531ms
+2026-03-09 18:51:28.462 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Transaction - application/json 227
+2026-03-09 18:51:28.467 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.TransactionController.Register (MiniFinancial.Presentation)'
+2026-03-09 18:51:28.469 -03:00 [INF] Route matched with {action = "Register", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Transactions.Commands.RegisterTransactionCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.TransactionController (MiniFinancial.Presentation).
+2026-03-09 18:51:56.331 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]
+2026-03-09 18:51:56.337 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[Amount], [t0].[Category], [t0].[CategoryUserId], [t0].[CategoryUserName], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[DestinyAccountId], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[IsReversal], [t0].[OccurredAt], [t0].[OriginAccountId], [t0].[ReversedTransactionId], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] = @id AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Amount], [t].[Category], [t].[CategoryUserId], [t].[CategoryUserName], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[DestinyAccountId], [t].[IsDeleted], [t].[IsRecurring], [t].[IsReversal], [t].[OccurredAt], [t].[OriginAccountId], [t].[ReversedTransactionId], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[OriginAccountId]
+ORDER BY [a0].[Id]

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="MiniFinancial.Application/MiniFinancial.Application.csproj" />
+  <Project Path="MiniFinancial.Domain/MiniFinancial.Domain.csproj" />
+  <Project Path="MiniFinancial.Infrastructure/MiniFinancial.Infrastructure.csproj" />
+  <Project Path="MiniFinancial.Presentation/MiniFinancial.Presentation.csproj" />
+  <Project Path="MiniFinancial.Tests/MiniFinancial.Tests.csproj" Id="e2e7d6f3-7db3-4106-a274-1cd1f4b0785c" />
+</Solution>

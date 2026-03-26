@@ -1,0 +1,813 @@
+2026-03-05 11:39:16.383 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 11:39:16.785 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 11:39:16.787 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 11:39:16.856 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 11:39:16.858 -03:00 [INF] Hosting environment: Development
+2026-03-05 11:39:16.863 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 11:39:21.773 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-05 11:39:23.787 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 11:39:23.977 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-05 11:39:24.000 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 11:39:24.017 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 2251.9493ms
+2026-03-05 11:39:24.163 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-05 11:39:24.163 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-05 11:39:24.163 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-05 11:39:24.168 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-05 11:39:24.172 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 11:39:24.173 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 11:39:24.190 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 27.0123ms
+2026-03-05 11:39:24.197 -03:00 [INF] Sending file with download name ''.
+2026-03-05 11:39:24.197 -03:00 [INF] Sending file with download name ''.
+2026-03-05 11:39:24.201 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 11:39:24.203 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 40.6195ms
+2026-03-05 11:39:24.255 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 87.9913ms
+2026-03-05 11:39:24.263 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 11:39:24.268 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 105.7458ms
+2026-03-05 11:39:24.671 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-05 11:39:24.682 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 11:39:24.707 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 11:39:24.708 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 37.0265ms
+2026-03-05 11:39:25.269 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-05 11:39:25.298 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 11:39:25.299 -03:00 [INF] Sending file with download name ''.
+2026-03-05 11:39:25.300 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 11:39:25.302 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 33.9556ms
+2026-03-05 11:39:45.503 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 62
+2026-03-05 11:39:45.508 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 11:39:45.566 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 11:39:45.577 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 11:40:17.105 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 31530.4342ms
+2026-03-05 11:40:17.108 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 11:40:17.129 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 500 null application/json; charset=utf-8 31626.097ms
+2026-03-05 11:40:46.042 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Users - application/json 68
+2026-03-05 11:40:46.046 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:40:46.054 -03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UsersController (MiniFinancial.Presentation).
+2026-03-05 11:40:46.061 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 11:40:46.094 -03:00 [ERR] Erro inesperado ao Registrar o Usuario.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand,MiniFinancial.Application.Common.Result`1[MiniFinancial.Application.DTOs.Accounts.AccountDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at MiniFinancial.Presentation.Controllers.UsersController.Register(RegisterUserCommand command, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation\Controllers\UsersController.cs:line 30
+2026-03-05 11:40:46.143 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 11:40:46.145 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation) in 88.2323ms
+2026-03-05 11:40:46.148 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:40:46.150 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Users - 400 null text/plain; charset=utf-8 108.2765ms
+2026-03-05 11:41:06.192 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Users - application/json 68
+2026-03-05 11:41:06.195 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:41:06.196 -03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UsersController (MiniFinancial.Presentation).
+2026-03-05 11:41:08.362 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 11:43:08.920 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 11:43:09.529 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 11:43:09.530 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 11:43:09.747 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 11:43:09.748 -03:00 [INF] Hosting environment: Development
+2026-03-05 11:43:09.749 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 11:43:15.718 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Users - application/json 68
+2026-03-05 11:43:15.843 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:43:15.891 -03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UsersController (MiniFinancial.Presentation).
+2026-03-05 11:43:15.897 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 11:43:23.249 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 11:43:23.305 -03:00 [ERR] Erro inesperado ao Registrar o Usuario.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand,MiniFinancial.Application.Common.Result`1[MiniFinancial.Application.DTOs.Accounts.AccountDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at MiniFinancial.Presentation.Controllers.UsersController.Register(RegisterUserCommand command, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation\Controllers\UsersController.cs:line 30
+2026-03-05 11:43:23.327 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 11:43:23.335 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation) in 7438.0701ms
+2026-03-05 11:43:23.337 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:43:23.340 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Users - 400 null text/plain; charset=utf-8 7628.7369ms
+2026-03-05 11:47:25.358 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 11:47:25.614 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 11:47:25.616 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 11:47:25.831 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 11:47:25.833 -03:00 [INF] Hosting environment: Development
+2026-03-05 11:47:25.834 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 11:47:31.448 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Users - application/json 68
+2026-03-05 11:47:31.565 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:47:31.613 -03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UsersController (MiniFinancial.Presentation).
+2026-03-05 11:47:31.623 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 11:47:31.676 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 11:48:23.932 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 11:48:27.887 -03:00 [INF] Executed DbCommand (153ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 11:48:28.282 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 200), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [DeletedAt], [Email], [IsDeleted], [Name], [PasswordHash], [Role], [UpdatedAt], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-05 11:48:28.301 -03:00 [INF] Usuario registrado com Sucesso. {"Id":"773d5b39-d4ad-4358-8f90-68294e1e7936","Name":"bob","Balance":0.0,"CreatedAt":"2026-03-05T14:48:22.6911911+00:00","UpdatedAt":null,"RefreshExpiresAt":"2026-03-05T16:48:22.6911911","$type":"AccountDto"}
+2026-03-05 11:48:28.310 -03:00 [INF] Requisição de Registro de Usuario completado com Suceso. ("773d5b39-d4ad-4358-8f90-68294e1e7936")
+2026-03-05 11:48:28.319 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.Accounts.AccountDto'.
+2026-03-05 11:48:28.381 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation) in 56759.5587ms
+2026-03-05 11:48:28.384 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:48:28.400 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Users - 201 null application/json; charset=utf-8 56956.9628ms
+2026-03-05 11:49:53.556 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 11:49:54.594 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 11:49:54.596 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 11:49:54.936 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 11:49:54.937 -03:00 [INF] Hosting environment: Development
+2026-03-05 11:49:54.938 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 11:50:10.327 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 51
+2026-03-05 11:50:10.449 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 11:50:10.489 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 11:50:10.495 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 11:50:11.340 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 11:50:12.376 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 11:50:12.901 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-05 11:50:12.928 -03:00 [INF] Login Realizado com Sucesso. {"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3NzNkNWIzOS1kNGFkLTQzNTgtOGY5MC02ODI5NGUxZTc5MzYiLCJlbWFpbCI6ImJvYkBnbWFpbC5jb20iLCJqdGkiOiIyNDRhYTI2MC01YmVkLTRlNzctYTFlNC1iYmI5MzI0YzJkYjAiLCJleHAiOjE3NzI3MjU4MTIsImlzcyI6Ik1pbmlGaW5hbmNpYWwiLCJhdWQiOiJNaW5pRmluYW5jaWFsVXNlcnMifQ.0V1g3vC2674oU2Kg_BrLpE8LiFP8I3hRUhqYQHx0wSI","RefreshToken":{"UserId":"773d5b39-d4ad-4358-8f90-68294e1e7936","Token":"xmv2tchKeI3JDWBnBA0NJWDtWxQCGLSTdVbSA50fXSB3fM4FAkaRP0tK3k0gvt/Ko7WrRb3xlNWVXX3qJ6UnOg==","ExpiresAt":"2026-03-12T14:50:12.7062023Z","IsRevoked":false,"RevokedAt":null,"ReplacedByToken":null,"Id":"c89f3f03-b1d0-470b-a20b-91c0d7debc88","CreatedAt":"2026-03-05T14:50:12.7065849+00:00","UpdatedAt":null,"Version":0,"IsDeleted":false,"DeletedAt":null,"$type":"UserRefreshToken"},"$type":"LoginUserResponse"}
+2026-03-05 11:50:12.948 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.Features.Auth.Commands.LoginUserResponse'.
+2026-03-05 11:50:12.982 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 2487.8066ms
+2026-03-05 11:50:12.985 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 11:50:12.998 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 2681.0994ms
+2026-03-05 11:51:12.086 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 11:51:12.425 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 11:51:12.427 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 11:51:12.665 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 11:51:12.666 -03:00 [INF] Hosting environment: Development
+2026-03-05 11:51:12.667 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 11:51:33.581 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Users - application/json 70
+2026-03-05 11:51:33.705 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:51:33.750 -03:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UsersController (MiniFinancial.Presentation).
+2026-03-05 11:51:33.762 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 11:51:33.800 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 11:51:34.670 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 11:51:35.750 -03:00 [INF] Executed DbCommand (86ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 11:51:36.001 -03:00 [WRN] Email já cadastrado. {"Path":{"$type":"RegisterUserHandler"}}
+2026-03-05 11:51:36.066 -03:00 [WRN] Email já cadastrado.
+2026-03-05 11:51:36.075 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 11:51:36.083 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation) in 2327.3781ms
+2026-03-05 11:51:36.085 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UsersController.Register (MiniFinancial.Presentation)'
+2026-03-05 11:51:36.099 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Users - 400 null text/plain; charset=utf-8 2528.773ms
+2026-03-05 14:16:30.801 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 14:16:31.058 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 14:16:31.061 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 14:16:31.267 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 14:16:31.269 -03:00 [INF] Hosting environment: Development
+2026-03-05 14:16:31.270 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 14:18:25.299 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 51
+2026-03-05 14:18:26.794 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:18:26.833 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 14:18:26.840 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 14:18:26.870 -03:00 [INF] Requisição de Login de Usuario recebida.
+2026-03-05 14:18:28.585 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 14:18:31.088 -03:00 [INF] Executed DbCommand (166ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 14:18:31.234 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MiniFinancial.Infrastructure.Persistence.AppDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-03-05 14:18:31.392 -03:00 [ERR] Erro inesperado. {"Path":{"$type":"LoginUserCommandHandler"}}
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at MiniFinancial.Infrastructure.Persistence.Repositories.UserRepository.GetByEmailAsync(String email, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Infrastructure\Persistence\Repositories\UserRepository.cs:line 28
+   at MiniFinancial.Application.Features.Auth.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Application\Features\Auth\Handlers\LoginUserCommandHandler.cs:line 48
+2026-03-05 14:18:31.496 -03:00 [ERR] Erro inesperado ao Logar com o Usuario.
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at MiniFinancial.Infrastructure.Persistence.Repositories.UserRepository.GetByEmailAsync(String email, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Infrastructure\Persistence\Repositories\UserRepository.cs:line 28
+   at MiniFinancial.Application.Features.Auth.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Application\Features\Auth\Handlers\LoginUserCommandHandler.cs:line 48
+   at MiniFinancial.Presentation_API_.Controllers.AuthController.Login(LoginUserCommand command, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation\Controllers\AuthController.cs:line 30
+2026-03-05 14:18:31.523 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 14:18:31.531 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 4692.01ms
+2026-03-05 14:18:31.533 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:18:31.546 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 400 null text/plain; charset=utf-8 6252.4861ms
+2026-03-05 14:18:46.660 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 51
+2026-03-05 14:18:46.667 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:18:46.668 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 14:18:46.671 -03:00 [INF] Requisição de Login de Usuario recebida.
+2026-03-05 14:18:46.746 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 14:18:46.752 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MiniFinancial.Infrastructure.Persistence.AppDbContext'.
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-03-05 14:18:46.839 -03:00 [ERR] Erro inesperado. {"Path":{"$type":"LoginUserCommandHandler"}}
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at MiniFinancial.Infrastructure.Persistence.Repositories.UserRepository.GetByEmailAsync(String email, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Infrastructure\Persistence\Repositories\UserRepository.cs:line 28
+   at MiniFinancial.Application.Features.Auth.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Application\Features\Auth\Handlers\LoginUserCommandHandler.cs:line 48
+2026-03-05 14:18:47.054 -03:00 [ERR] Erro inesperado ao Logar com o Usuario.
+System.InvalidCastException: Unable to cast object of type 'System.DateTime' to type 'System.DateTimeOffset'.
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueFromSqlBufferInternal[T](SqlBuffer data, _SqlMetaData metaData, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValueInternal[T](Int32 i, Boolean isAsync)
+   at Microsoft.Data.SqlClient.SqlDataReader.GetFieldValue[T](Int32 i)
+   at lambda_method54(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.<PopulateIncludeCollection>g__ProcessCurrentElementRow|24_0[TIncludingEntity,TIncludedEntity](<>c__DisplayClass24_0`2&)
+   at Microsoft.EntityFrameworkCore.Query.RelationalShapedQueryCompilingExpressionVisitor.ShaperProcessingExpressionVisitor.PopulateIncludeCollection[TIncludingEntity,TIncludedEntity](Int32 collectionId, QueryContext queryContext, DbDataReader dbDataReader, SingleQueryResultCoordinator resultCoordinator, Func`3 parentIdentifier, Func`3 outerIdentifier, Func`3 selfIdentifier, IReadOnlyList`1 parentIdentifierValueComparers, IReadOnlyList`1 outerIdentifierValueComparers, IReadOnlyList`1 selfIdentifierValueComparers, Func`5 innerShaper, INavigationBase inverseNavigation, Action`2 fixup, Boolean trackingQuery)
+   at lambda_method53(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at MiniFinancial.Infrastructure.Persistence.Repositories.UserRepository.GetByEmailAsync(String email, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Infrastructure\Persistence\Repositories\UserRepository.cs:line 28
+   at MiniFinancial.Application.Features.Auth.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Application\Features\Auth\Handlers\LoginUserCommandHandler.cs:line 48
+   at MiniFinancial.Presentation_API_.Controllers.AuthController.Login(LoginUserCommand command, CancellationToken cancellationToken) in D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation\Controllers\AuthController.cs:line 30
+2026-03-05 14:18:47.074 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 14:18:47.075 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 404.8255ms
+2026-03-05 14:18:47.076 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:18:47.078 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 400 null text/plain; charset=utf-8 417.7755ms
+2026-03-05 14:23:53.008 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 14:24:13.687 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 14:24:14.405 -03:00 [INF] Executed DbCommand (302ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [MiniFinancial];
+2026-03-05 14:24:14.458 -03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MiniFinancial] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-03-05 14:24:14.474 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-05 14:24:14.477 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-03-05 14:24:14.497 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-03-05 14:24:14.570 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-03-05 14:24:14.578 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-03-05 14:24:14.579 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-03-05 14:24:14.589 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-03-05 14:24:14.598 -03:00 [INF] Applying migration '20260305172355_InitialCreate'.
+2026-03-05 14:24:14.636 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [Type] int NOT NULL,
+    [MonthlyLimit] decimal(18,2) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2026-03-05 14:24:14.638 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [IdempotencyRequests] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Key] nvarchar(100) NOT NULL,
+    [RequestHash] nvarchar(200) NOT NULL,
+    [ResponseJson] nvarchar(max) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_IdempotencyRequests] PRIMARY KEY ([Id])
+);
+2026-03-05 14:24:14.640 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [Email] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Role] int NOT NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2026-03-05 14:24:14.642 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Accounts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Name] nvarchar(150) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [AllowNegativeBalance] bit NOT NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Accounts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Accounts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2026-03-05 14:24:14.645 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRefreshToken] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [Token] nvarchar(500) NOT NULL,
+    [ExpiresAt] datetimeoffset NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [RevokedAt] datetimeoffset NULL,
+    [ReplacedByToken] nvarchar(max) NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_UserRefreshToken] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserRefreshToken_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2026-03-05 14:24:14.648 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [Id] uniqueidentifier NOT NULL,
+    [AccountId] uniqueidentifier NOT NULL,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [Type] int NOT NULL,
+    [Description] nvarchar(300) NOT NULL,
+    [OccurredAt] datetimeoffset NOT NULL,
+    [IsRecurring] bit NOT NULL,
+    [CreatedAt] datetimeoffset NOT NULL,
+    [UpdatedAt] datetimeoffset NULL,
+    [Version] int NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetimeoffset NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Transactions_Accounts_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [Accounts] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Transactions_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE NO ACTION
+);
+2026-03-05 14:24:14.649 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Accounts_UserId] ON [Accounts] ([UserId]);
+2026-03-05 14:24:16.042 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Accounts_UserId_Name] ON [Accounts] ([UserId], [Name]);
+2026-03-05 14:24:16.043 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Categories_UserId_Name] ON [Categories] ([UserId], [Name]);
+2026-03-05 14:24:16.044 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_IdempotencyRequests_UserId_Key] ON [IdempotencyRequests] ([UserId], [Key]);
+2026-03-05 14:24:16.045 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_AccountId] ON [Transactions] ([AccountId]);
+2026-03-05 14:24:16.046 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_CategoryId] ON [Transactions] ([CategoryId]);
+2026-03-05 14:24:16.046 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_OccurredAt] ON [Transactions] ([OccurredAt]);
+2026-03-05 14:24:16.047 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_UserRefreshToken_Token] ON [UserRefreshToken] ([Token]);
+2026-03-05 14:24:16.049 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserRefreshToken_UserId] ON [UserRefreshToken] ([UserId]);
+2026-03-05 14:24:16.050 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]);
+2026-03-05 14:24:16.056 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260305172355_InitialCreate', N'10.0.3');
+2026-03-05 14:24:16.061 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-03-05 14:24:23.141 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 14:24:24.257 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 14:24:24.258 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 14:24:24.319 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 14:24:24.320 -03:00 [INF] Hosting environment: Development
+2026-03-05 14:24:24.321 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 14:24:49.514 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-05 14:24:49.794 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 14:24:49.968 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-05 14:24:50.008 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 14:24:50.036 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 533.707ms
+2026-03-05 14:24:50.036 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-05 14:24:50.037 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-05 14:24:50.037 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-05 14:24:50.046 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-05 14:24:50.046 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 14:24:50.049 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 14:24:50.060 -03:00 [INF] Sending file with download name ''.
+2026-03-05 14:24:50.060 -03:00 [INF] Sending file with download name ''.
+2026-03-05 14:24:50.069 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 14:24:50.074 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 37.2638ms
+2026-03-05 14:24:50.074 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 37.6851ms
+2026-03-05 14:24:50.126 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 14:24:50.133 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 96.2277ms
+2026-03-05 14:24:50.133 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.4503ms
+2026-03-05 14:24:50.512 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-05 14:24:50.523 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 14:24:50.543 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 14:24:50.545 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 33.3332ms
+2026-03-05 14:24:50.888 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-05 14:24:50.892 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 14:24:50.893 -03:00 [INF] Sending file with download name ''.
+2026-03-05 14:24:50.894 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 14:24:50.896 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 8.1648ms
+2026-03-05 14:25:19.631 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/User - application/json 93
+2026-03-05 14:25:19.637 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-05 14:25:19.680 -03:00 [INF] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Users.Commands.RegisterUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.UserController (MiniFinancial.Presentation).
+2026-03-05 14:25:19.691 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 14:25:27.291 -03:00 [INF] Requisição de Registro de Usuario recebida.
+2026-03-05 14:25:28.141 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 14:25:29.338 -03:00 [INF] Executed DbCommand (114ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 14:25:29.801 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (Size = 200), @p4='?' (DbType = Boolean), @p5='?' (Size = 150), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [CreatedAt], [DeletedAt], [Email], [IsDeleted], [Name], [PasswordHash], [Role], [UpdatedAt], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-05 14:25:29.821 -03:00 [INF] Usuario registrado com Sucesso. {"id":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Arnaldo","Email":"arnaldo@gmail.com","Password":"AQAAAAIAAYagAAAAEKFABBGzKK17+IuBQ3FFbhS6Bk4joi374mo93fcgqw4TRDJy9HHqZC0j+BSv8TmSCQ==","Role":"User","$type":"UserDTO"}
+2026-03-05 14:25:29.833 -03:00 [INF] Requisição de Registro de Usuario completado com Suceso. ("4017aeb7-0255-4f02-8326-fa32cc1b21c1")
+2026-03-05 14:25:29.844 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.UserDTO'.
+2026-03-05 14:25:29.876 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation) in 10185.2642ms
+2026-03-05 14:25:29.878 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.UserController.Register (MiniFinancial.Presentation)'
+2026-03-05 14:25:29.887 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/User - 201 null application/json; charset=utf-8 10255.4622ms
+2026-03-05 14:25:55.785 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-05 14:25:55.789 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:25:55.797 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 14:25:55.807 -03:00 [INF] Requisição de Login de Usuario recebida.
+2026-03-05 14:25:55.882 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 14:25:56.206 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-05 14:25:56.218 -03:00 [INF] Login Realizado com Sucesso. {"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiNzc2MWQwOGItMjlhMC00Y2Y4LTgyZTctM2FiZjEyMGM5Zjk3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3MjczNTE1NSwiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.BxtA41P1dIDfilILm-l6x8oc1tfMbX-o2cNRmQoZmAQ","user":{"id":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Arnaldo","Email":"arnaldo@gmail.com","Password":"AQAAAAIAAYagAAAAEKFABBGzKK17+IuBQ3FFbhS6Bk4joi374mo93fcgqw4TRDJy9HHqZC0j+BSv8TmSCQ==","Role":"User","$type":"UserDTO"},"CreatedAt":"2026-03-05T17:25:56.2172333+00:00","$type":"LoginDTO"}
+2026-03-05 14:25:56.231 -03:00 [INF] Requisição de Login de Usuario completado com Suceso. (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiNzc2MWQwOGItMjlhMC00Y2Y4LTgyZTctM2FiZjEyMGM5Zjk3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3MjczNTE1NSwiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.BxtA41P1dIDfilILm-l6x8oc1tfMbX-o2cNRmQoZmAQ)
+2026-03-05 14:25:56.236 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-05 14:25:56.245 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 443.0363ms
+2026-03-05 14:25:56.247 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 14:25:56.250 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 464.8375ms
+2026-03-05 15:46:12.444 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 15:46:13.039 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 15:46:13.041 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 15:46:13.246 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 15:46:13.248 -03:00 [INF] Hosting environment: Development
+2026-03-05 15:46:13.248 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 15:46:20.108 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-05 15:46:21.694 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 15:46:21.851 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-05 15:46:21.874 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 15:46:21.882 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 1784.8185ms
+2026-03-05 15:46:22.016 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-05 15:46:22.016 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-05 15:46:22.016 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-05 15:46:22.017 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-05 15:46:22.056 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 15:46:22.057 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 15:46:22.066 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 49.9966ms
+2026-03-05 15:46:22.068 -03:00 [INF] Sending file with download name ''.
+2026-03-05 15:46:22.068 -03:00 [INF] Sending file with download name ''.
+2026-03-05 15:46:22.078 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 15:46:22.112 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 15:46:22.112 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.2592ms
+2026-03-05 15:46:22.125 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 108.5349ms
+2026-03-05 15:46:22.125 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 108.6414ms
+2026-03-05 15:46:22.513 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-05 15:46:22.525 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 15:46:22.561 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 15:46:22.563 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 49.7816ms
+2026-03-05 15:46:23.323 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-05 15:46:23.326 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 15:46:23.328 -03:00 [INF] Sending file with download name ''.
+2026-03-05 15:46:23.329 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 15:46:23.330 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 6.7674ms
+2026-03-05 15:47:19.436 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-05 15:47:19.442 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 15:47:19.486 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 15:47:19.494 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 15:47:19.525 -03:00 [INF] Requisição de Login de Usuario recebida.
+2026-03-05 15:47:21.126 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 15:47:30.814 -03:00 [INF] Executed DbCommand (434ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 15:47:31.275 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-05 15:47:31.295 -03:00 [INF] Login Realizado com Sucesso. {"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiZDViYTU4MTAtNDZhMi00YTZiLWI0NTQtMjc4YWZjOWQ3NDZlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3Mjc0MDA1MSwiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.CRKRwy-bnWmAfnIuMzkHcrfiJSnokxNe6WpHipPAsZI","user":{"id":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Arnaldo","Email":"arnaldo@gmail.com","Password":"AQAAAAIAAYagAAAAEKFABBGzKK17+IuBQ3FFbhS6Bk4joi374mo93fcgqw4TRDJy9HHqZC0j+BSv8TmSCQ==","Role":"User","$type":"UserDTO"},"CreatedAt":"2026-03-05T18:47:31.2914435+00:00","$type":"LoginDTO"}
+2026-03-05 15:47:31.313 -03:00 [INF] Requisição de Login de Usuario completado com Suceso. (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiZDViYTU4MTAtNDZhMi00YTZiLWI0NTQtMjc4YWZjOWQ3NDZlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3Mjc0MDA1MSwiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.CRKRwy-bnWmAfnIuMzkHcrfiJSnokxNe6WpHipPAsZI)
+2026-03-05 15:47:31.322 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-05 15:47:31.340 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 11845.8549ms
+2026-03-05 15:47:31.342 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 15:47:31.351 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 11915.4219ms
+2026-03-05 15:49:20.201 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 73
+2026-03-05 15:49:20.267 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-05 15:49:20.277 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-05 15:49:20.290 -03:00 [INF] Requisição de Registro de Conta recebida.
+2026-03-05 15:49:20.429 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 15:49:20.476 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version], [t0].[Id], [t0].[AccountId], [t0].[Amount], [t0].[CategoryId], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[OccurredAt], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM [Accounts] AS [a]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[AccountId], [t].[Amount], [t].[CategoryId], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[IsDeleted], [t].[IsRecurring], [t].[OccurredAt], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a].[Id] = [t0].[AccountId]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [a].[Id]
+2026-03-05 15:49:20.533 -03:00 [WRN] Conta já cadastrada. {"Path":{"$type":"RegisterAccountHandler"}}
+2026-03-05 15:49:20.591 -03:00 [WRN] Conta já cadastrada.
+2026-03-05 15:49:20.592 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-03-05 15:49:20.593 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation) in 312.8928ms
+2026-03-05 15:49:20.621 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-05 15:49:20.622 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 400 null text/plain; charset=utf-8 421.7779ms
+2026-03-05 15:49:46.832 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 73
+2026-03-05 15:49:46.838 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-05 15:49:46.839 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-05 15:49:46.846 -03:00 [INF] Requisição de Registro de Conta recebida.
+2026-03-05 15:49:46.870 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 15:49:46.875 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version], [t0].[Id], [t0].[AccountId], [t0].[Amount], [t0].[CategoryId], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[OccurredAt], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM [Accounts] AS [a]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[AccountId], [t].[Amount], [t].[CategoryId], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[IsDeleted], [t].[IsRecurring], [t].[OccurredAt], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a].[Id] = [t0].[AccountId]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [a].[Id]
+2026-03-05 15:55:59.371 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 15:55:59.632 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 15:55:59.635 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 15:55:59.858 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 15:55:59.860 -03:00 [INF] Hosting environment: Development
+2026-03-05 15:55:59.860 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 15:56:04.163 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Account - application/json 73
+2026-03-05 15:56:05.781 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-05 15:56:05.819 -03:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Accounts.Commads.RegisterAccountCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.AccountController (MiniFinancial.Presentation).
+2026-03-05 15:56:05.827 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 15:56:05.861 -03:00 [INF] Requisição de Registro de Conta recebida.
+2026-03-05 15:56:07.716 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 15:56:09.026 -03:00 [INF] Executed DbCommand (126ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 15:56:09.276 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AllowNegativeBalance], [a0].[Balance], [a0].[CreatedAt], [a0].[DeletedAt], [a0].[IsDeleted], [a0].[Name], [a0].[UpdatedAt], [a0].[UserId], [a0].[Version], [t0].[Id], [t0].[AccountId], [t0].[Amount], [t0].[CategoryId], [t0].[CreatedAt], [t0].[DeletedAt], [t0].[Description], [t0].[IsDeleted], [t0].[IsRecurring], [t0].[OccurredAt], [t0].[Type], [t0].[UpdatedAt], [t0].[Version]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AllowNegativeBalance], [a].[Balance], [a].[CreatedAt], [a].[DeletedAt], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt], [a].[UserId], [a].[Version]
+    FROM [Accounts] AS [a]
+    WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit) AND [a].[UserId] = @userId AND [a].[IsDeleted] = CAST(0 AS bit)
+) AS [a0]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[AccountId], [t].[Amount], [t].[CategoryId], [t].[CreatedAt], [t].[DeletedAt], [t].[Description], [t].[IsDeleted], [t].[IsRecurring], [t].[OccurredAt], [t].[Type], [t].[UpdatedAt], [t].[Version]
+    FROM [Transactions] AS [t]
+    WHERE [t].[IsDeleted] = CAST(0 AS bit)
+) AS [t0] ON [a0].[Id] = [t0].[AccountId]
+ORDER BY [a0].[Id]
+2026-03-05 15:56:09.490 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Boolean), @p6='?' (Size = 150), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([Id], [AllowNegativeBalance], [Balance], [CreatedAt], [DeletedAt], [IsDeleted], [Name], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-05 15:56:09.508 -03:00 [INF] Conta registrada com Sucesso. {"Id":"a3bb1e41-c7e3-4acc-a8c5-8fee88d8f7d3","UserId":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Arnaldo","Balance":0.0,"AllowNegativeBalance":false,"$type":"AccountDTO"}
+2026-03-05 15:56:09.517 -03:00 [INF] Requisição de Registro de Conta completada com Suceso. ("a3bb1e41-c7e3-4acc-a8c5-8fee88d8f7d3")
+2026-03-05 15:56:09.525 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.AccountDTO'.
+2026-03-05 15:56:09.567 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation) in 3740.1388ms
+2026-03-05 15:56:09.570 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.AccountController.Register (MiniFinancial.Presentation)'
+2026-03-05 15:56:09.583 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Account - 201 null application/json; charset=utf-8 5427.251ms
+2026-03-05 21:57:58.274 -03:00 [INF] User profile is available. Using 'C:\Users\Arnaldinho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 21:57:58.737 -03:00 [INF] Now listening on: https://localhost:7160
+2026-03-05 21:57:58.740 -03:00 [INF] Now listening on: http://localhost:5172
+2026-03-05 21:57:58.798 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 21:57:58.802 -03:00 [INF] Hosting environment: Development
+2026-03-05 21:57:58.810 -03:00 [INF] Content root path: D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial\MiniFinancial.Presentation
+2026-03-05 21:58:03.130 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-05 21:58:05.033 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 21:58:05.305 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-05 21:58:05.327 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 21:58:05.396 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 2275.3099ms
+2026-03-05 21:58:05.485 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/ - null null
+2026-03-05 21:58:05.494 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 21:58:05.496 -03:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-05 21:58:05.497 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-05 21:58:05.501 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/ - 200 null text/html 16.2929ms
+2026-03-05 21:58:05.525 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.js - null null
+2026-03-05 21:58:05.525 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - null null
+2026-03-05 21:58:05.526 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-05 21:58:05.530 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/_vs/browserLink - null null
+2026-03-05 21:58:05.532 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 21:58:05.532 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 21:58:05.553 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_framework/aspnetcore-browser-refresh.js - 200 14957 application/javascript; charset=utf-8 27.6744ms
+2026-03-05 21:58:05.555 -03:00 [INF] Sending file with download name ''.
+2026-03-05 21:58:05.555 -03:00 [INF] Sending file with download name ''.
+2026-03-05 21:58:05.569 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-05 21:58:05.578 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 52.1367ms
+2026-03-05 21:58:05.620 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-05 21:58:05.625 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/_vs/browserLink - 200 null text/javascript; charset=UTF-8 95.721ms
+2026-03-05 21:58:05.627 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/scalar.js - 200 991987 text/javascript 102.1119ms
+2026-03-05 21:58:06.024 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/openapi/v1.json - null null
+2026-03-05 21:58:06.028 -03:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 21:58:06.068 -03:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-05 21:58:06.069 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/openapi/v1.json - 200 null application/json;charset=utf-8 45.4025ms
+2026-03-05 21:58:06.562 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/scalar/favicon.svg - null null
+2026-03-05 21:58:06.584 -03:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 21:58:06.592 -03:00 [INF] Sending file with download name ''.
+2026-03-05 21:58:06.596 -03:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-03-05 21:58:06.602 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/scalar/favicon.svg - 200 533 image/svg+xml 39.693ms
+2026-03-05 21:59:51.261 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Auth/login - application/json 59
+2026-03-05 21:59:51.264 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 21:59:51.336 -03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MiniFinancial.Application.Features.Auth.Commands.LoginUserCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation_API_.Controllers.AuthController (MiniFinancial.Presentation).
+2026-03-05 21:59:51.347 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-05 21:59:51.385 -03:00 [INF] Requisição de Login de Usuario recebida.
+2026-03-05 21:59:53.618 -03:00 [WRN] No store type was specified for the decimal property 'MonthlyLimit' on entity type 'Category'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-03-05 21:59:57.095 -03:00 [INF] Executed DbCommand (149ms) [Parameters=[@email='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Email] = @email AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 21:59:57.618 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = DateTimeOffset), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 500), @p9='?' (DbType = DateTimeOffset), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserRefreshToken] ([Id], [CreatedAt], [DeletedAt], [ExpiresAt], [IsDeleted], [IsRevoked], [ReplacedByToken], [RevokedAt], [Token], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2026-03-05 21:59:57.638 -03:00 [INF] Login Realizado com Sucesso. {"AccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiM2U2ZjliNGMtYjNkMy00NzhjLThkZDEtNjgwYTkzNzJkNWM5IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3Mjc2MjM5NywiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.i1NPuYQrd8cWi0kbB_JkjxMOapqsqAoAScx_zL9Uwwc","user":{"id":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Arnaldo","Email":"arnaldo@gmail.com","Password":"AQAAAAIAAYagAAAAEKFABBGzKK17+IuBQ3FFbhS6Bk4joi374mo93fcgqw4TRDJy9HHqZC0j+BSv8TmSCQ==","Role":"User","$type":"UserDTO"},"CreatedAt":"2026-03-06T00:59:57.6331379+00:00","$type":"LoginDTO"}
+2026-03-05 21:59:57.649 -03:00 [INF] Requisição de Login de Usuario completado com Suceso. (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MDE3YWViNy0wMjU1LTRmMDItODMyNi1mYTMyY2MxYjIxYzEiLCJlbWFpbCI6ImFybmFsZG9AZ21haWwuY29tIiwianRpIjoiM2U2ZjliNGMtYjNkMy00NzhjLThkZDEtNjgwYTkzNzJkNWM5IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc3Mjc2MjM5NywiaXNzIjoiTWluaUZpbmFuY2lhbCIsImF1ZCI6Ik1pbmlGaW5hbmNpYWxVc2VycyJ9.i1NPuYQrd8cWi0kbB_JkjxMOapqsqAoAScx_zL9Uwwc)
+2026-03-05 21:59:57.658 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.LoginDTO'.
+2026-03-05 21:59:57.677 -03:00 [INF] Executed action MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation) in 6330.5314ms
+2026-03-05 21:59:57.679 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation_API_.Controllers.AuthController.Login (MiniFinancial.Presentation)'
+2026-03-05 21:59:57.688 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Auth/login - 200 null application/json; charset=utf-8 6426.8826ms
+2026-03-05 22:02:16.662 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7160/api/Category - application/json 116
+2026-03-05 22:02:16.949 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-05 22:02:16.964 -03:00 [INF] Route matched with {action = "Register", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(MiniFinancial.Application.Features.Categories.Commands.RegisterCategoryCommand, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.CategoryController (MiniFinancial.Presentation).
+2026-03-05 22:02:16.987 -03:00 [INF] Requisição de Registro de Categoria recebida.
+2026-03-05 22:02:17.115 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[DeletedAt], [u1].[Email], [u1].[IsDeleted], [u1].[Name], [u1].[PasswordHash], [u1].[Role], [u1].[UpdatedAt], [u1].[Version], [u0].[Id], [u0].[CreatedAt], [u0].[DeletedAt], [u0].[ExpiresAt], [u0].[IsDeleted], [u0].[IsRevoked], [u0].[ReplacedByToken], [u0].[RevokedAt], [u0].[Token], [u0].[UpdatedAt], [u0].[UserId], [u0].[Version]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[DeletedAt], [u].[Email], [u].[IsDeleted], [u].[Name], [u].[PasswordHash], [u].[Role], [u].[UpdatedAt], [u].[Version]
+    FROM [Users] AS [u]
+    WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Id] = @id AND [u].[IsDeleted] = CAST(0 AS bit)
+) AS [u1]
+LEFT JOIN [UserRefreshToken] AS [u0] ON [u1].[Id] = [u0].[UserId]
+ORDER BY [u1].[Id]
+2026-03-05 22:02:17.136 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@userId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedAt], [c].[DeletedAt], [c].[IsDeleted], [c].[MonthlyLimit], [c].[Name], [c].[Type], [c].[UpdatedAt], [c].[UserId], [c].[Version]
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[UserId] = @userId AND [c].[IsDeleted] = CAST(0 AS bit)
+2026-03-05 22:02:17.187 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (DbType = DateTimeOffset), @p3='?' (DbType = Boolean), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 150), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTimeOffset), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [CreatedAt], [DeletedAt], [IsDeleted], [MonthlyLimit], [Name], [Type], [UpdatedAt], [UserId], [Version])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-03-05 22:02:17.192 -03:00 [INF] Conta registrada com Sucesso. {"Id":"bea18f7e-fa3d-464a-948a-14d3af3e61f4","userId":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Comidinha","Type":"Income","MonthlyLimit":500.21,"$type":"CategoryDTO"}
+2026-03-05 22:02:17.197 -03:00 [INF] Requisição de Registro de Categoria completado com Suceso. ("bea18f7e-fa3d-464a-948a-14d3af3e61f4")
+2026-03-05 22:02:17.200 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'MiniFinancial.Application.DTOs.CategoryDTO'.
+2026-03-05 22:02:17.225 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation) in 256.8651ms
+2026-03-05 22:02:17.230 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.Register (MiniFinancial.Presentation)'
+2026-03-05 22:02:17.232 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7160/api/Category - 201 null application/json; charset=utf-8 569.4421ms
+2026-03-05 22:03:05.755 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7160/api/Category/bea18f7e-fa3d-464a-948a-14d3af3e61f4 - null null
+2026-03-05 22:03:05.763 -03:00 [INF] Executing endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.GetById (MiniFinancial.Presentation)'
+2026-03-05 22:03:05.770 -03:00 [INF] Route matched with {action = "GetById", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid, System.Threading.CancellationToken) on controller MiniFinancial.Presentation.Controllers.CategoryController (MiniFinancial.Presentation).
+2026-03-05 22:03:05.779 -03:00 [INF] Requisição de Consular a Categoria recebida.
+2026-03-05 22:03:05.810 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[DeletedAt], [c].[IsDeleted], [c].[MonthlyLimit], [c].[Name], [c].[Type], [c].[UpdatedAt], [c].[UserId], [c].[Version]
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Id] = @id AND [c].[IsDeleted] = CAST(0 AS bit)
+2026-03-05 22:03:05.816 -03:00 [INF] Categoria encontrada com Sucesso. {"Id":"bea18f7e-fa3d-464a-948a-14d3af3e61f4","userId":"4017aeb7-0255-4f02-8326-fa32cc1b21c1","Name":"Comidinha","Type":"Income","MonthlyLimit":500.21,"$type":"CategoryDTO"}
+2026-03-05 22:03:05.825 -03:00 [INF] Requisição de Consular a Categoria completada com Suceso. ("bea18f7e-fa3d-464a-948a-14d3af3e61f4")
+2026-03-05 22:03:05.827 -03:00 [INF] Executing OkObjectResult, writing value of type 'MiniFinancial.Application.DTOs.CategoryDTO'.
+2026-03-05 22:03:05.828 -03:00 [INF] Executed action MiniFinancial.Presentation.Controllers.CategoryController.GetById (MiniFinancial.Presentation) in 55.287ms
+2026-03-05 22:03:05.830 -03:00 [INF] Executed endpoint 'MiniFinancial.Presentation.Controllers.CategoryController.GetById (MiniFinancial.Presentation)'
+2026-03-05 22:03:05.832 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7160/api/Category/bea18f7e-fa3d-464a-948a-14d3af3e61f4 - 200 null application/json; charset=utf-8 77.4545ms
