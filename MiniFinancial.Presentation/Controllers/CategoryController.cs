@@ -52,10 +52,9 @@ namespace MiniFinancial.Presentation.Controllers
 
         [HttpDelete("{id:guid}")]
         [Authorize]
-        public async Task<IActionResult> Delete(Guid id, [FromBody] RemoveCategoryCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
         {
-            if (id != command.Id) return BadRequest("Id da rota diferente do corpo.");
-
+            var command = new RemoveCategoryCommand(id);
             var result = await _mediator.Send(command, cancellationToken);
             if (!result.IsSuccess) return BadRequest(result.Errors);
 

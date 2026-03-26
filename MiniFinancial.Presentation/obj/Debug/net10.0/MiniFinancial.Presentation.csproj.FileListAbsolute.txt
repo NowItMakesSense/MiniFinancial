@@ -538,3 +538,4 @@ D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation\obj\Debug\net10.
 D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation\obj\Debug\net10.0\MiniFina.E3A8EA2C.Up2Date
 D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation\obj\Debug\net10.0\MiniFinancial.Presentation.genruntimeconfig.cache
 D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation\obj\Debug\net10.0\ref\MiniFinancial.Presentation.dll
+D:\Projetos\Estudos\C#\MiniFinancial\MiniFinancial.Presentation\obj\Debug\net10.0\MiniFinancial.Presentation.sourcelink.json

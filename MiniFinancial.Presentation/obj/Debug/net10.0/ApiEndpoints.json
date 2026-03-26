@@ -26,6 +26,11 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -42,11 +47,16 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "command",
-        "Type": "MiniFinancial.Application.Features.Accounts.Commads.UpdateAccountCommand",
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -63,11 +73,11 @@
       {
         "Name": "id",
         "Type": "System.Guid",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
-        "Name": "command",
-        "Type": "MiniFinancial.Application.Features.Accounts.Commads.RemoveAccountCommand",
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],

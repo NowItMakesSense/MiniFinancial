@@ -52,8 +52,9 @@ namespace MiniFinancial.Presentation.Controllers
 
         [HttpDelete("{id:guid}")]
         [Authorize]
-        public async Task<IActionResult> Delete(Guid id, [FromBody] RemoveTransactionCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
         {
+            var command = new RemoveTransactionCommand(id);
             var result = await _mediator.Send(command, cancellationToken);
             if (!result.IsSuccess) return BadRequest(result.Errors);
 
